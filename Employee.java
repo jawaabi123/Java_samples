@@ -28,7 +28,7 @@ public class Employee
         input.close();
     }
     
-    public static void main(String args[])
+    public static void main(String ... args)
     {
         //Employee e=new Employee(23400,"ljj");
         Scanner input=new Scanner(System.in);
