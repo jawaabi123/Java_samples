@@ -45,7 +45,7 @@ class Employee
             }
         }
         String s="qwe";
-        
+        int asdf=5;
         input.close();
     }
 }
