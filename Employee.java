@@ -45,7 +45,6 @@ public class Employee
                 System.out.println(i);
             }
         }
-        
         input.close();
     }
 }
