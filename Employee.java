@@ -35,6 +35,7 @@ public class Employee
         //alphabet(input);
         String a="A man, a plan, a canal: Panama";
         int[] newf=new int[5];
+        
         variable(1,2,3);
         int[][] arr={{1,2,3},{4,5,6},{7,8,9}};//2d array
         for(int[] row:arr)
