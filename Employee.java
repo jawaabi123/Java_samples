@@ -27,7 +27,6 @@ public class Employee
         else{System.out.println("uppercase letter");}
         input.close();
     }
-    
     public static void main(String ... args)
     {
         //Employee e=new Employee(23400,"ljj");
