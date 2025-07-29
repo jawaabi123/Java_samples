@@ -1,15 +1,44 @@
 import java.util.*;
 public class Hello 
 {
+      public int longestSubarray(int[] nums) 
+      {
+         int maxLength=Integer.MIN_VALUE;
+         int i=0,j=0;
+         int zeroCount=0;
+         int currentLength=0;
+         while(j<nums.length)
+         {
+               //shrinking the window from left
+               while(zeroCount>1)
+               {
+                  if(nums[i]==0)
+                  {
+                     zeroCount--;
+                     i++;
+                  }
+                  else
+                  {
+                     currentLength--;
+                  }
+               }
+               if(nums[j]==0)
+               {
+                  zeroCount++;
+               }
+               else if(nums[j]==1)
+               {
+                  currentLength++;
+               }
+               maxLength=Math.max(maxLength,currentLength);
+               j++;
+         }
+         return maxLength;
+      }
      public static void main(String args[])
      {
-         Stack<Integer>s=new Stack<>();
-         s.push(2);
-         s.push(3);
-         while(!s.isEmpty())
-         {
-           System.out.println(s.pop());
-         }
-         System.out.println(56);
+        Hello obj1=new Hello();
+        int[] a={0,1,1,1,0,1,1,0,1};
+        System.out.println(obj1.longestSubarray(a));
      }
 }
