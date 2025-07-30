@@ -78,21 +78,19 @@ public class Tree
                     {
                         insert(node.left,value);
                     }
-                    
                 }
             }
             public void levelOrderTraversal()
             {
-                LinkedList<Node>stack=new LinkedList<>();
-                stack.addLast(root);
-                while(stack.size()!=0)
+                Queue<Node>queue=new LinkedList<>();
+                queue.poll();
+                while(queue.size()!=0)
                 {
-                    Node current=stack.removeFirst();
-                    if(current.left!=null)stack.addLast(current.left);
-                    if(current.right!=null)stack.addLast(current.right);
+                    Node current=queue.poll();
+                    if(current.left!=null)queue.offer(current.left);
+                    if(current.right!=null)queue.offer(current.right);
                     System.out.println(current.value);
                 }
-                
             }
         }
     public static void main(String args[])

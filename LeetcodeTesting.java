@@ -1,5 +1,5 @@
 import java.util.*;
-public class Hello 
+public class LeetcodeTesting 
 {
       public int longestSubarray(int[] nums) 
       {
@@ -15,12 +15,12 @@ public class Hello
                   if(nums[i]==0)
                   {
                      zeroCount--;
-                     i++;
                   }
                   else
                   {
                      currentLength--;
                   }
+                  i++;
                }
                if(nums[j]==0)
                {
@@ -37,8 +37,22 @@ public class Hello
       }
      public static void main(String args[])
      {
-        Hello obj1=new Hello();
+        LeetcodeTesting obj1=new LeetcodeTesting();
         int[] a={0,1,1,1,0,1,1,0,1};
+        Scanner input =new Scanner(System.in);
+        char [][] testChar=new char[2][2];
+        for(int i=0;i<testChar.length;i++)
+        {
+         for(int j=0;j<testChar[0].length;j++)
+         {
+            System.out.println("Enter element:");
+            testChar[i][j]=input.next().charAt(0);
+         }
+        }
+        for (char[] rows:testChar)
+        {
+            System.out.println(rows);
+        }
         System.out.println(obj1.longestSubarray(a));
      }
 }
